@@ -8,7 +8,7 @@ const prisma = new PrismaClient()
 app.use(cors())
 app.use(express.json())
 
-const port = 5678
+const port = process.env.PORT
 
 // see all my friends
 app.get('/my-friends/:ourId', async (req, res) => {
